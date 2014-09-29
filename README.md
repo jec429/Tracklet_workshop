@@ -31,10 +31,10 @@ Projection format:
 Variable | bits |
 ---------|------|
 filler | 53:45 |
-phi position | 44:31 |
-z position | 30:19 |
-phi der | 18:10 |
-z der | 9:0 |
+phi position | 44:30 |
+z position | 29:18 |
+phi der | 17:9 |
+z der | 8:0 |
 
 VM Projection format:
 
