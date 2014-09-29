@@ -46,7 +46,7 @@ module Projection_Calculation(
     Projections:
     int it1=0.5*irproj*irinv;
     int it2=(it1>>9)*(it1>>9);
-    int it3=(1<<20)+it2*(488);  
+    int it3=(1<<20)+((it2*488)>>25);  
     int it4=(it1>>8)*(it3>>10);
     iphiproj=iphi0-(it4>>10); 
     int it5=it*irproj;
