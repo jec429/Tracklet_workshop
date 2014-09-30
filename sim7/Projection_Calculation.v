@@ -40,8 +40,13 @@ module Projection_Calculation(
 		write_projection = 0;
 
    /*
+    Hint 1:
     In combination with the algorithm presented in the whitepaper, this
-    is the code you will try to implement from a C++ version into verilog
+    is the code you will try to implement from a C++ version into Verilog.
+    Note that the number of C++ steps might correspond to one or more 
+    Verilog steps.
+    
+    Remember to pipeline!
 
     Projections:
     int it1=0.5*irproj*irinv;
@@ -55,11 +60,24 @@ module Projection_Calculation(
     iphider=-0.5*irinv;
     izder=it;
     
+    Hint 2:
+    The resutls from these calculations are very dependent on the bit
+    assigment of the intermediate steps. The sizes we have come up with
+    are given as a hint, but better solutions could be possible.
+    
+    Bit Sizes:
+    it1 : 30 bits
+    it2 : 31 bits
+    it3 : 22 bits
+    it4 : 28 bits
+    it5 : 26 bits
+    it6 : 31 bits
+    
     */
 
    
 	always @(posedge clk) begin
-		projection_calc 	<= tracklet - 1'b1;
+		projection_calc 	<= tracklet;
 		write_projection 	<= 9'b0;
 	end
 
