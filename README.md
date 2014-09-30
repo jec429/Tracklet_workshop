@@ -30,8 +30,8 @@ Projection format:
 
 Variable | bits |
 ---------|------|
-filler | 53:45 |
-phi position | 44:30 |
+filler | 53:44 |
+phi position | 43:30 |
 z position | 29:18 |
 phi der | 17:9 |
 z der | 8:0 |
