@@ -36,7 +36,20 @@ module VM_Proj_Routing(
 
 	parameter NUM_PROJ = 0;
 	parameter zbit = 29;
-	
+
+   /*
+    Hint:
+    The Virtual Module Projections are a reduced version of the projection data that we
+    will use for a rough matching to Virtual Module Stubs. These VM projections contain
+    a few bits of phi position, z position, and their derivatives (as shown in the table
+    in the README file). We also use the phi and z information to route them into the 
+    appropriate memories. From the projection, the top three bits from phi and the third 
+    bit from z (top two give the region information) are used to route in VM memories and
+    we store the next three (four) bits for phi (z) into the VM projection. The index
+    corresponds to the bottom six bit of the address in the Projections memory.
+        
+    */
+   
 	
 
 endmodule
