@@ -53,7 +53,8 @@ module Projection_Calculation(
     int it2=(it1>>9)*(it1>>9);
     int it3=(1<<20)+((it2*488)>>25);  
     int it4=(it1>>8)*(it3>>10);
-    iphiproj=iphi0-(it4>>10); 
+    pre_iphiproj=iphi0-(it4>>10);
+    iphiproj = pre_iphiproj >> 2; // This is to compensate for the different widths of phi in the inner and outer layers
     int it5=it*irproj;
     int it6=(it5>>9)*(it3>>9);
     izproj=iz0+(is6>>12); 
