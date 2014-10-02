@@ -56,7 +56,7 @@ module Projection_Calculation(
     iphiproj=iphi0-(it4>>10); 
     int it5=it*irproj;
     int it6=(it5>>9)*(it3>>9);
-    izproj=iz0+(is6>>16); 
+    izproj=iz0+(is6>>12); 
     iphider=-0.5*irinv;
     izder=it;
     
